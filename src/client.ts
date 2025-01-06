@@ -1,32 +1,9 @@
-import WebSocket from 'ws';
+// Manages the websocket on the client side
 
-// client.ts
-const websocket = new WebSocket("ws://localhost:8080");
+import {Card} from "./deck";
 
-websocket.on('open', () => {
-  console.log("WebSocket connected");
-});
+let hand : Card[];
 
-websocket.onmessage = (event) => {
-  const message = event.data;
-  console.log("Received message:", message);
+export function dealHand(){
 
-  // Update the HTML with the received message
-  const messageElement = document.getElementById("message");
-//   if (messageElement) {
-//     messageElement.textContent = message;
-//   }
-};
-
-websocket.onerror = (event) => {
-  console.error("WebSocket error:", event);
-};
-
-// Send a message when the button is clicked
-const sendButton = document.getElementById("sendButton");
-if (sendButton) {
-  sendButton.addEventListener("click", () => {
-    const message = "Hello from client!";
-    websocket.send(message);
-  });
 }

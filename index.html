@@ -8,30 +8,27 @@
   <title>WebSocket</title>
 </head>
 <body>
-  <h1>WebSocket Client</h1>
+  <h1>Card Game</h1>
  <p> This client connects to a WebSocket server. It sends when you press return in the outgoing message box. 
 </p>
-  <p> Try ws://localhost:8080 if you're running a local server,<br>
-  or wss://ws.postman-echo.com/raw to use the Postman.com websocket echo server.
- </p>
   <div>
     Server Address: <input type="text" id="serverURL" value="ws://localhost:8080"><br>
     Connected to server: <span id="connection">false</span><br>
     <input type="button" id="connectButton" value="Connect"><br>
-    Outgoing message: <input type="text" id="outgoing"><br>
-    Incoming message: <span id="incoming"></span><br>
+    Content Received: <span id="incoming"></span><br>
   </div>
   <hr>
   <div>
     <input type="button" id="draw" value="Draw"><br>
+    <input type="button" id="eot" value="End Turn"><br>
   </div>
 
   <div class="hand">
-    <div class="card">A♠</div>
-    <div class="card">K♥</div>
-    <div class="card">Q♣</div>
-    <div class="card">J♦</div>
-    <div class="card">10♠</div>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
   </div>
 </body>
 </html>

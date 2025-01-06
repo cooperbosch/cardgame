@@ -27,7 +27,9 @@ span {
 } */
 
 .hand {
-  position: relative;
+  /* position: relative; */
+  position: absolute;
+  bottom: 0;
   display: flex;
   justify-content: center;
   gap: 15px;
@@ -37,6 +39,8 @@ span {
   width: 100%;
   /* box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5); */
 }
+
+
 
 .card {
   position: relative;
